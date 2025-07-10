@@ -6,7 +6,7 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.linear_model import LinearRegression
 
 # Load the dataset (ensure the path is correct or adjust it accordingly)
-dataset = pd.read_csv('E:/linear regression/day1/processes2.csv')
+dataset = pd.read_csv('processes2.csv')
 
 # Define X and Y
 X = dataset.iloc[:, dataset.columns != 'selling_price']  # Exclude the target column
@@ -85,4 +85,4 @@ if st.button("Predict Price"):
     predicted_price = regressor.predict(user_input_scaled)
 
     # Display the prediction
-    st.write(f'The predicted selling price of the car is: RS{predicted_price[0]:,.2f}\-')
+  st.write(f'The predicted selling price of the car is: RS{predicted_price[0]:,.2f}')
